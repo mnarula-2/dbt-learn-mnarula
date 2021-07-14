@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: raw
+    tables:
+      - name: payment
+
+models:
+  - name: stg_payments
+    description: One row per payment typer per status.
+    columns:
+      - name: payment_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
