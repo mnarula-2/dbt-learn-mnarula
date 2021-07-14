@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: orders
+    description: Orders model.
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: amount
+        description: Amount in USD
